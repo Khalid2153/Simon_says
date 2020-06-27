@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"> 
+    <link rel="icon" href="../kisspng-free-simon-says-game-echo-simon-memory-challenge-5c02646e86c8d2.4562494615436606545521.png">
+    <link rel="stylesheet" href="./Styles/styles.css">
+    <title>Simon Says</title>
 </head>
 <body>
-    
+    <!--<div  id="title">
+        <h1>Welcome to </br> Simon Says</h1>
+    </div>-->
+    <div class="gameboard">
+        <div id="green" class="color green left" data-color="green"></div>
+        <div id="red" class="color red right" data-color="red"></div>
+        <div id="yellow" class="color yellow left" data-color="yellow"></div>
+        <div id="blue" class="color blue right" data-color="blue"></div>
+        <button id="button_start" class="button_start" onclick="start_game()">Start Game</button>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../Src/index.js"></script>
 </body>
 </html>
