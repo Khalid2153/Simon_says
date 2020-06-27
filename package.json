@@ -1,0 +1,22 @@
+{
+  "name": "simon_says",
+  "version": "0.0.0",
+  "description": "A Simon says game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khalid2153/Simon_says.git"
+  },
+  "keywords": [
+    "Simon_says"
+  ],
+  "author": "Khalid Izquierdo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Khalid2153/Simon_says/issues"
+  },
+  "homepage": "https://github.com/Khalid2153/Simon_says#readme"
+}
