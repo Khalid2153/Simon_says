@@ -1,29 +1,71 @@
 * {
     font-family: 'Muli', sans-serif;
 }
-
+/* ordene el orden de las clases */
 body {
     margin: 0;
-    background: #dedede;
+    background: #d3cdad;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
     height: 100vh;
 }
 
+.title{
+    margin: 10px auto;
+    padding: 10px;
+    border: black 5px solid;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .gameboard {
-    height: 100vh;
+    border: black 5px solid;
+    height: 100vw;
     width: 100vw;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto;
-    max-height: 60vh;
-    max-width: 60vh;
+    max-height: 70vh;
+    max-width: 70vh;
+    min-height: 70vh;
+    min-width: 70vh;
+    left: calc(68% - 200px);
 }
 
-.color {
-    width: 50%;
-    height: 50%;
-    display: inline-block;
+
+.button_start {
+    border: black 5px solid;
+    width: 400px;
+    height: 100px;
+    background: #ecf0f1;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin: auto; 
+
+    position: absolute;
+    top: calc(45% + 55px);
+    left: calc(50% - 200px);
+    outline: none;
+}
+
+
+.screen{
+    display: flex;
+/*     flex-flow: wrap; */
+    flex-direction: column;
+}
+
+
+
+
+/* hide, left, right, colors */
+
+.hide {
+    display: none;
 }
 
 .left {
@@ -34,8 +76,14 @@ body {
     float: left;
 }
 
+.color {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+}
+
 .green {
-    background: #519D6E;
+    background: #519d6edc;
 }
 
 .green.light {
@@ -43,7 +91,7 @@ body {
 }
 
 .red {
-    background: #D73351;
+    background: #d73351c9;
 }
 
 .red.light {
@@ -51,7 +99,7 @@ body {
 }
 
 .yellow {
-    background: #FFF01F;
+    background: #fff01fd2;
 }
 
 .yellow.light {
@@ -59,25 +107,9 @@ body {
 }
 
 .blue {
-    background: #47AFFF;
+    background: #47afffce;
 }
 
 .blue.light {
     background: #008BF8;
-}
-
-.button_start {
-    width: 400px;
-    height: 100px;
-    background: #ecf0f1;
-    color: #2c3e50;
-    font-size: 2.5rem;
-    position: absolute;
-    top: calc(50% - 50px);
-    left: calc(50% - 200px);
-    outline: none;
-}
-
-.hide {
-    display: none;
 }

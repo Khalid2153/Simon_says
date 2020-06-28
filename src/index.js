@@ -5,6 +5,9 @@ const blue = document.getElementById("blue");
 const button_start = document.getElementById("button_start");
 const LAST_LEVEL = 10;
 
+/* puse esto */
+const list = document.getElementById('orderedList');
+
 class Game {
     constructor() {
         this.init();
@@ -90,12 +93,20 @@ class Game {
         }
     }
     win() {
-        swal("Simon says", "You are the best!", "success").then(this.init);
+        /* modifique esto */
+        swal("Simon says", "You are the best!", "success").then(()=>{
+            this.init();
+            list.innerHTML+=`<li>You won uwu</li>`; /* agregue esto */
+        });
+        
+        
     }
     lose() {
         swal("Simon says", "Ups, try again! ", "error").then(() => {
             this.deleteClickEvent();
             this.init();
+            /* agregue esto */
+            list.innerHTML+=`<li>You lost uu</li>`;
         });
     }
 }
