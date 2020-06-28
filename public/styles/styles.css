@@ -1,0 +1,103 @@
+* {
+    font-family: 'Muli', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #d3cdad;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 100vh;
+}
+
+.title{
+    margin: 10px auto;
+    padding: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.gameboard {
+    height: 100vw;
+    width: 100vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    max-height: 70vh;
+    max-width: 70vh;
+    min-height: 70vh;
+    min-width: 70vh;
+    left: calc(68% - 200px);
+}
+
+.button_start {
+    width: 400px;
+    height: 100px;
+    background: #ecf0f1;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin: auto; 
+    position: absolute;
+    top: calc(45% + 55px);
+    left: calc(50% - 200px);
+    outline: none;
+}
+
+.screen{
+    display: flex;
+    flex-direction: column;
+}
+
+.hide {
+    display: none;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: left;
+}
+
+.color {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+}
+
+.green {
+    background: #519d6edc;
+}
+
+.green.light {
+    background: #3F896B;
+}
+
+.red {
+    background: #d73351c9;
+}
+
+.red.light {
+    background: #CC2936;
+}
+
+.yellow {
+    background: #fff01fd2;
+}
+
+.yellow.light {
+    background: #FADB0F;
+}
+
+.blue {
+    background: #47afffce;
+}
+
+.blue.light {
+    background: #008BF8;
+}
