@@ -1,11 +1,9 @@
-const green = document.getElementById("green");
-const red = document.getElementById("red");
-const yellow = document.getElementById("yellow");
-const blue = document.getElementById("blue");
-const button_start = document.getElementById("button_start");
+const green = document.getElementById(`green`);
+const red = document.getElementById(`red`);
+const yellow = document.getElementById(`yellow`);
+const blue = document.getElementById(`blue`);
+const button_start = document.getElementById(`button_start`);
 const LAST_LEVEL = 10;
-
-/* puse esto */
 const list = document.getElementById('orderedList');
 
 class Game {
@@ -34,11 +32,11 @@ class Game {
         this.startSequence();
     }
     togglebutton_start() {
-        const status = button_start.classList.contains("hide");
+        const status = button_start.classList.contains(`hide`);
         if (status) {
-            button_start.classList.remove("hide");
+            button_start.classList.remove(`hide`);
         } else {
-            button_start.classList.add("hide");
+            button_start.classList.add(`hide`);
         }
     }
     startSequence() {
@@ -52,11 +50,11 @@ class Game {
         this.addClickEvent();
     }
     lightColor(numberColor) {
-        this.colors[numberColor].classList.add("light");
+        this.colors[numberColor].classList.add(`light`);
         setTimeout(() => this.turnOffColor(numberColor), 350);
     }
     turnOffColor(numberColor) {
-        this.colors[numberColor].classList.remove("light");
+        this.colors[numberColor].classList.remove(`light`);
     }
     lightSequence() {
         for (let i = 0; i < this.level; i++) {
@@ -65,7 +63,7 @@ class Game {
     }
     addClickEvent() {
         for (let i = 0; i < 4; i++) {
-            this.colors[i].addEventListener("click", this.chooseColor);
+            this.colors[i].addEventListener(`click`, this.chooseColor);
         }
     }
     deleteClickEvent() {
@@ -93,10 +91,9 @@ class Game {
         }
     }
     win() {
-        /* modifique esto */
         swal("Simon says", "You are the best!", "success").then(()=>{
             this.init();
-            list.innerHTML+=`<li>You won uwu</li>`; /* agregue esto */
+            list.innerHTML+=`<li>You won uwu</li>`;
         });
         
         
@@ -105,7 +102,6 @@ class Game {
         swal("Simon says", "Ups, try again! ", "error").then(() => {
             this.deleteClickEvent();
             this.init();
-            /* agregue esto */
             list.innerHTML+=`<li>You lost uu</li>`;
         });
     }

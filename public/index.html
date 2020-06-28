@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,9 +10,8 @@
     <title>Simon says</title>
 </head>
 <body>
-    <div class="screen"> <!-- flex-box column, para que el title este arriba y containergame abajo -->
-
-        <div class="title"><!-- flex-box row, para poner el titulo a la izquierda y los resultados a la derecha-->
+    <div class="screen">
+        <div class="title">
             <h1>
                 Simon Says:
             </h1>
@@ -22,21 +20,17 @@
                 </ol>
             </p>
         </div>
-
         <div class="containerGame">
-
             <div class="gameboard">
                 <div id="green" class="color green left" data-color="green"></div>
                 <div id="red" class="color red right" data-color="red"></div>
                 <div id="yellow" class="color yellow left" data-color="yellow"></div>
                 <div id="blue" class="color blue left" data-color="blue"></div>
             </div>
-
             <button id="button_start" class="button_start" onclick="beginGame()">
                 Start Game!
             </button>
         </div>
-
     </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="../src/index.js"></script>

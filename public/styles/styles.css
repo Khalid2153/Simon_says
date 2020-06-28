@@ -1,7 +1,7 @@
 * {
     font-family: 'Muli', sans-serif;
 }
-/* ordene el orden de las clases */
+
 body {
     margin: 0;
     background: #d3cdad;
@@ -15,7 +15,6 @@ body {
 .title{
     margin: 10px auto;
     padding: 10px;
-    border: black 5px solid;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -23,7 +22,6 @@ body {
 }
 
 .gameboard {
-    border: black 5px solid;
     height: 100vw;
     width: 100vw;
     border-radius: 50%;
@@ -36,33 +34,23 @@ body {
     left: calc(68% - 200px);
 }
 
-
 .button_start {
-    border: black 5px solid;
     width: 400px;
     height: 100px;
     background: #ecf0f1;
     color: #2c3e50;
     font-size: 2.5rem;
     margin: auto; 
-
     position: absolute;
     top: calc(45% + 55px);
     left: calc(50% - 200px);
     outline: none;
 }
 
-
 .screen{
     display: flex;
-/*     flex-flow: wrap; */
     flex-direction: column;
 }
-
-
-
-
-/* hide, left, right, colors */
 
 .hide {
     display: none;
