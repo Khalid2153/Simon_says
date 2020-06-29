@@ -1,3 +1,4 @@
+alert("RULES \nFollow the color pattern to win.")
 const green = document.getElementById(`green`);
 const red = document.getElementById(`red`);
 const yellow = document.getElementById(`yellow`);
