@@ -13,12 +13,19 @@ body {
 }
 
 .title{
+    width: 30%;
     margin: 10px auto;
     padding: 10px;
     height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
+}
+
+.notes{
+    margin-right: 1%;
+    font-size: 1.5em;
 }
 
 .gameboard {
@@ -34,7 +41,7 @@ body {
     left: calc(68% - 200px);
 }
 
-.button_start {
+.buttonStart {
     width: 400px;
     height: 100px;
     background: #ecf0f1;
