@@ -2,9 +2,10 @@ const green = document.getElementById(`green`);
 const red = document.getElementById(`red`);
 const yellow = document.getElementById(`yellow`);
 const blue = document.getElementById(`blue`);
-const button_start = document.getElementById(`button_start`);
-const LAST_LEVEL = 10;
+const buttonStart = document.getElementById(`buttonStart`);
+const LAST_LEVEL = 7;
 const list = document.getElementById('orderedList');
+var level = document.getElementById("level")
 
 class Game {
     constructor() {
@@ -12,7 +13,7 @@ class Game {
         setTimeout(this.nextLvl, 500);
     }
     init() {
-        this.togglebutton_start();
+        this.togglebuttonStart();
         this.level = 1;
         this.colors = {
             0: green,
@@ -31,12 +32,12 @@ class Game {
         this.init = this.init.bind(this);
         this.startSequence();
     }
-    togglebutton_start() {
-        const status = button_start.classList.contains(`hide`);
+    togglebuttonStart() {
+        const status = buttonStart.classList.contains(`hide`);
         if (status) {
-            button_start.classList.remove(`hide`);
+            buttonStart.classList.remove(`hide`);
         } else {
-            button_start.classList.add(`hide`);
+            buttonStart.classList.add(`hide`);
         }
     }
     startSequence() {
@@ -68,7 +69,7 @@ class Game {
     }
     deleteClickEvent() {
         for (let i = 0; i < 4; i++) {
-            this.colors[i].removeEventListener("click", this.chooseColor);
+            this.colors[i].removeEventListener(`click`, this.chooseColor);
         }
     }
     chooseColor(evt) {
@@ -79,6 +80,7 @@ class Game {
             this.sublvl++;
             if (this.sublvl === this.level) {
                 this.level++;
+                level.innerHTML=`Nivel : ${this.level}`;
                 this.deleteClickEvent();
                 if (this.level === LAST_LEVEL + 1) {
                     this.win();
@@ -91,18 +93,18 @@ class Game {
         }
     }
     win() {
-        swal("Simon says", "You are the best!", "success").then(()=>{
+        swal(`Simon says`, `You are the best!`, `success`).then(()=>{
             this.init();
             list.innerHTML+=`<li>You won uwu</li>`;
-        });
-        
-        
+            level.innerHTML=`Nivel : 1`;
+        });     
     }
     lose() {
-        swal("Simon says", "Ups, try again! ", "error").then(() => {
+        swal(`Simon says`, `Ups, try again!`, `error`).then(() => {
             this.deleteClickEvent();
             this.init();
             list.innerHTML+=`<li>You lost uu</li>`;
+            level.innerHTML=`Nivel : 1`;
         });
     }
 }
